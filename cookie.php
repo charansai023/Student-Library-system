@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Check if the cookie is set and not expired
-$payment_details = isset($_COOKIE[$cookie_name]) ? json_decode($_COOKIE[$cookie_name], true) : null;
+$payment_details = isset($_COOKIE[$cookie_name]) ? json_decode($_COOKIE[$cookie_name], true) ;
 
 // If the cookie is expired, unset it
 if ($payment_details && time() > $cookie_expiration) {
@@ -126,4 +126,5 @@ if ($payment_details && time() > $cookie_expiration) {
         <?php endif; ?>
     </div>
 </body>
+
 </html>
